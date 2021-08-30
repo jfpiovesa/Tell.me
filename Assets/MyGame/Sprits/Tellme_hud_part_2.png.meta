@@ -1,0 +1,512 @@
+fileFormatVersion: 2
+guid: fff8016a46514c442b887dcfcec834fe
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1042797378609374797
+    second: Tellme_hud_part_2_0
+  - first:
+      213: 7985723142106852836
+    second: Tellme_hud_part_2_1
+  - first:
+      213: 7305045325888832095
+    second: Tellme_hud_part_2_2
+  - first:
+      213: -1210487417266852637
+    second: Tellme_hud_part_2_3
+  - first:
+      213: 6252188100387995481
+    second: Tellme_hud_part_2_4
+  - first:
+      213: 7779662362168516401
+    second: Tellme_hud_part_2_5
+  - first:
+      213: 4182022084136713127
+    second: Tellme_hud_part_2_6
+  - first:
+      213: 4012412357930439610
+    second: Tellme_hud_part_2_7
+  - first:
+      213: -8370968354008541330
+    second: Tellme_hud_part_2_8
+  - first:
+      213: -5819597207798836594
+    second: Tellme_hud_part_2_9
+  - first:
+      213: 3059593347833357404
+    second: Tellme_hud_part_2_10
+  - first:
+      213: -4745202902747861078
+    second: Tellme_hud_part_2_11
+  - first:
+      213: 7260111783477549461
+    second: Tellme_hud_part_2_12
+  - first:
+      213: 6601364680174654331
+    second: Tellme_hud_part_2_13
+  - first:
+      213: -9122553437253396816
+    second: Tellme_hud_part_2_14
+  - first:
+      213: -2360785549803680804
+    second: Tellme_hud_part_2_15
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Tellme_hud_part_2_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1
+        width: 611
+        height: 793
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4668bcd0b2c87e00800000000000000
+      internalID: 1042797378609374797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tellme_hud_part_2_1
+      rect:
+        serializedVersion: 2
+        x: 1183
+        y: 545
+        width: 590
+        height: 247
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ed25e733ecf2de60800000000000000
+      internalID: 7985723142106852836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tellme_hud_part_2_2
+      rect:
+        serializedVersion: 2
+        x: 1785
+        y: 547
+        width: 587
+        height: 247
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f524bb5250cb06560800000000000000
+      internalID: 7305045325888832095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tellme_hud_part_2_3
+      rect:
+        serializedVersion: 2
+        x: 1183
+        y: 427
+        width: 590
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ecaab08b1c733fe0800000000000000
+      internalID: -1210487417266852637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tellme_hud_part_2_4
+      rect:
+        serializedVersion: 2
+        x: 1183
+        y: 320
+        width: 590
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95ffc88a3fb34c650800000000000000
+      internalID: 6252188100387995481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tellme_hud_part_2_5
+      rect:
+        serializedVersion: 2
+        x: 948
+        y: 24
+        width: 204
+        height: 223
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13fd78133b9e6fb60800000000000000
+      internalID: 7779662362168516401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tellme_hud_part_2_6
+      rect:
+        serializedVersion: 2
+        x: 1183
+        y: 24
+        width: 590
+        height: 247
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7abbecf9de6890a30800000000000000
+      internalID: 4182022084136713127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tellme_hud_part_2_7
+      rect:
+        serializedVersion: 2
+        x: 1798
+        y: 308
+        width: 299
+        height: 203
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab3d4d6e7c3fea730800000000000000
+      internalID: 4012412357930439610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tellme_hud_part_2_8
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 25
+        width: 265
+        height: 231
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e67d84122a854db80800000000000000
+      internalID: -8370968354008541330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tellme_hud_part_2_9
+      rect:
+        serializedVersion: 2
+        x: 777
+        y: 278
+        width: 210
+        height: 122
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e829b4d4c23ac3fa0800000000000000
+      internalID: -5819597207798836594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tellme_hud_part_2_10
+      rect:
+        serializedVersion: 2
+        x: 1021
+        y: 350
+        width: 69
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5461ce70fbd57a20800000000000000
+      internalID: 3059593347833357404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tellme_hud_part_2_11
+      rect:
+        serializedVersion: 2
+        x: 1022
+        y: 274
+        width: 69
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aafaf82e917a52eb0800000000000000
+      internalID: -4745202902747861078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tellme_hud_part_2_12
+      rect:
+        serializedVersion: 2
+        x: 653
+        y: 294
+        width: 93
+        height: 98
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5999ecb833911c460800000000000000
+      internalID: 7260111783477549461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tellme_hud_part_2_13
+      rect:
+        serializedVersion: 2
+        x: 633
+        y: 420
+        width: 490
+        height: 108
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b73de9a7332cc9b50800000000000000
+      internalID: 6601364680174654331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tellme_hud_part_2_14
+      rect:
+        serializedVersion: 2
+        x: 632
+        y: 550
+        width: 491
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b61eff6bfd266180800000000000000
+      internalID: -9122553437253396816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tellme_hud_part_2_15
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 686
+        width: 524
+        height: 102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdb8319ec0ecc3fd0800000000000000
+      internalID: -2360785549803680804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
