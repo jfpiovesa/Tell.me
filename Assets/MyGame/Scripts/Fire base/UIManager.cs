@@ -6,7 +6,6 @@ using UnityEngine;
 public class UIManager : MonoBehaviour
 {
     public static UIManager instance;
-    AudioManager audio;
     //Screen object variables
     [Header("Valores de ativar objetos")]
     public GameObject loginUI;

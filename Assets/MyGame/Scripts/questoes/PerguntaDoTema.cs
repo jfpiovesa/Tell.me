@@ -5,7 +5,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using Firebase.Firestore;
-
+using System.Linq;
 
 public class PerguntaDoTema : MonoBehaviour
 {
@@ -21,7 +21,7 @@ public class PerguntaDoTema : MonoBehaviour
     public TMP_Text a;
     public TMP_Text b;
     public TMP_Text c;
-    public TMP_Text d;   
+    public TMP_Text d;
     public TMP_Text tema;
 
     [Header("valor tema & pergunta atual")]
@@ -31,15 +31,15 @@ public class PerguntaDoTema : MonoBehaviour
     [SerializeField]
     int idValor;
     public Image infoResposta;
-    public GameObject btn_sair, btn_inicializar,painel;
-    
+    public GameObject btn_sair, btn_inicializar, painel;
+
 
 
     [Header("Conometro")]
     public Text timerText;
     public float startTime = 10;
-    public Image  ObjectConometro;
- 
+    public Image ObjectConometro;
+
 
     [Header("Resposta & valores da perguntas")]
     public string respostaTemporaria;
@@ -59,17 +59,23 @@ public class PerguntaDoTema : MonoBehaviour
     private int totalDetentativas = 0;
     private int tentativaAtual = 0;
     private int levelAt = 0;
-    private int xpAt =0 ;
+    private int xpAt = 0;
 
     [Header("Perguntas")]
-    public  List<string> Hash = new List<string>();
-    public  string[] h ;
+    public List<string> Hash = new List<string>();
+    public string[] h;
 
     [Header("Valores Xp e level do tema")]
     private int levelTema = 0;
     private int xpTema = 0;
 
 
+    [Header("Valores pergunta bonus")]
+    public string valorA,valorB,valorC,valorD;
+    public List<string> bonusListaIds;
+    public string[] bonusArrayIds;
+    int valorProximaPerguntasBonus = 0;
+    int aleatorio;
     private void Start()
     {
        
@@ -130,6 +136,7 @@ public class PerguntaDoTema : MonoBehaviour
         idValor = PlayerPrefs.GetInt("IdTema");
         TemasNomes();
         StartCoroutine(GetXp());
+        StartCoroutine(BonusGetValue());
         StartCoroutine(GetLevel());
         StartCoroutine(HasGetValue());
         StartCoroutine(GetValuesTentativas());
@@ -147,12 +154,67 @@ public class PerguntaDoTema : MonoBehaviour
         StartCoroutine(LoadPerguntas());
         StartCoroutine(GetXpTema());
         StartCoroutine(GetLevelTema());
+        aleatorio = Random.Range(1,h.Length);
         disparaperguntas = true;
 
     }
+
+    void PerguntasEBonus()
+    {
+       
+    }
+
+    private IEnumerator LoadPerguntasSatisfacao()
+    {
+
+        string n = bonusArrayIds[valorProximaPerguntasBonus];
+
+
+        var dbTask = _fireBabeAuh.dbReference.Child("Bonus").Child("Perguntas").Child(n).GetValueAsync();
+
+        yield return new WaitUntil(predicate: () => dbTask.IsCompleted);
+
+        if (dbTask.Exception != null)
+        {
+            Debug.LogWarning(message: $" failed   to register task with {dbTask.Exception}");
+        }
+
+        else
+        {
+            DataSnapshot snapshot = dbTask.Result;
+            string perguntas = snapshot.Child("Pergunta").Value.ToString();         
+            string _a = snapshot.Child("1").Child("Pergunta").Value.ToString();
+            string _b = snapshot.Child("2").Child("Pergunta").Value.ToString();        
+            string _c = snapshot.Child("3").Child("Pergunta").Value.ToString();
+            string _d = snapshot.Child("4").Child("Pergunta").Value.ToString();      
+            TemaPergunta.text = perguntas;
+            respostaTemporaria = "BonusPerguntas";
+            a.text = _a;
+            b.text = _b;
+            c.text = _c;
+            d.text = _d;
+
+            string aValue = snapshot.Child("1").Child("valor").Value.ToString();
+            string bValue = snapshot.Child("2").Child("valor").Value.ToString();
+            string cValue = snapshot.Child("3").Child("valor").Value.ToString();
+            string dValue = snapshot.Child("4").Child("valor").Value.ToString();
+
+            valorA = aValue.ToString();
+            valorB = bValue.ToString();
+            valorC = cValue.ToString();
+            valorD = dValue.ToString();
+
+         
+        }
+
+
+    }
+
     private IEnumerator LoadPerguntas()
     {
+
         string n = h[valorperguntas];
+    
         
         var dbTask = _fireBabeAuh.dbReference.Child("temas").Child(idValor.ToString()).Child("Perguntas").Child(n).GetValueAsync();
 
@@ -174,6 +236,7 @@ public class PerguntaDoTema : MonoBehaviour
             string c = snapshot.Child("C").Value.ToString();
             string d = snapshot.Child("D").Value.ToString();          
             Perguntas(perguntas,resposta, a, b, c, d);
+
 
 
         }
@@ -208,36 +271,71 @@ public class PerguntaDoTema : MonoBehaviour
     {
              m_pl = true;
 
-            if (alternativa == "A" && m_pl == true)
-            {
-                if (a.text == respostaTemporaria)
-                {            
-                    acertos += 1;
-                }            
-            }
-            else if (alternativa == "B" && m_pl == true)
-            {
-                if (b.text == respostaTemporaria)
-                {           
-                    acertos += 1;
-                }         
-            }
-            else if (alternativa == "C" && m_pl == true)
+        if (alternativa == "A" && m_pl == true)
+        {
+            if (respostaTemporaria == "BonusPerguntas")
             {
 
+                Setbonus(valorA);
+                acertos += 1;
+            }
+            else
+            {
+                if (a.text == respostaTemporaria)
+                {
+                    acertos += 1;
+                }
+            }
+        }
+        else if (alternativa == "B" && m_pl == true)
+        {
+            if (respostaTemporaria == "BonusPerguntas")
+            {
+
+                Setbonus(valorB);
+                acertos += 1;
+            }
+            else
+            {
+                if (b.text == respostaTemporaria)
+                {
+                    acertos += 1;
+                }
+            }
+        }
+        else if (alternativa == "C" && m_pl == true)
+        {
+            if (respostaTemporaria == "BonusPerguntas")
+            {
+
+                Setbonus(valorC);
+                acertos += 1;
+            }
+            else
+            {
                 if (c.text == respostaTemporaria)
                 {
                     acertos += 1;
-                }       
+                }
             }
+        }
 
-            else if (alternativa == "D" && m_pl == true)
+        else if (alternativa == "D" && m_pl == true)
+        {
+            if (respostaTemporaria == "BonusPerguntas")
+            {
+
+                Setbonus(valorD);
+                acertos += 1;
+            }
+            else
             {
                 if (d.text == respostaTemporaria)
                 {
                     acertos += 1;
-                }            
-            }         
+                }
+            }
+        }         
         proximapergunta();
     }
 
@@ -245,17 +343,26 @@ public class PerguntaDoTema : MonoBehaviour
     {
 
         //proximas pertuntas  e tempo do conometro entra no valor inicial de novo 
-
+        
        
         valorperguntas ++ ;
         startTime = 10;
       
         if (valorperguntas < h.Length )
         {
-           
+           if(valorperguntas == aleatorio)
+            {
+                StartCoroutine(LoadPerguntasSatisfacao());
 
-            StartCoroutine(LoadPerguntas());          
-            m_pl = false;
+                m_pl = false;
+            }
+           else
+            {
+                StartCoroutine(LoadPerguntas());
+                m_pl = false;
+            }
+                      
+        
         }
         else
         {   // oque fazer quando termina as perguntas.
@@ -293,11 +400,37 @@ public class PerguntaDoTema : MonoBehaviour
            
             PlayerPrefs.SetInt("IdTema", 0);
             Hash.Clear();
-
+            
         }
         
     }
+    public IEnumerator BonusGetValue()
+    {
 
+        var dbTask = _fireBabeAuh.dbReference.Child("Bonus").Child("Perguntas").OrderByValue().GetValueAsync();
+        yield return new WaitUntil(predicate: () => dbTask.IsCompleted);
+
+        if (dbTask.Exception != null)
+        {
+            Debug.LogError(" deu ruim has");
+        }
+        else
+        {
+            DataSnapshot snapshot = dbTask.Result;
+            foreach (DataSnapshot data in snapshot.Children)
+            {
+                string a = data.Key.ToString();
+                bonusListaIds.Add(a);
+
+
+            }
+
+            bonusArrayIds = bonusListaIds.ToArray();         
+
+        }
+
+
+    }
     public IEnumerator HasGetValue()
     {
 
@@ -318,8 +451,15 @@ public class PerguntaDoTema : MonoBehaviour
 
                
             }
-
-            h = Hash.ToArray();
+            for (int i = 0; i < h.Length; i++)
+            {
+                int _a = Random.Range(0, Hash.ToArray().Length);
+                h[i] = Hash.ElementAt<string>(_a);
+                if (h.Length > 9)
+                {
+                    break;
+                }
+            }
             valorBarraTamonho = h.Length;
            
 
@@ -354,10 +494,17 @@ public class PerguntaDoTema : MonoBehaviour
         levelAt = 0;
         TxtClear();
         Hash.Clear();
+        bonusListaIds.Clear();
         btn_inicializar.SetActive(true);
         btn_sair.SetActive(true);
         painel.SetActive(false);
     }
+    private void Setbonus(string valor)
+    {
+
+        _fireBabeAuh.dbReference.Child("users").Child(_fireBabeAuh.user.UserId).Child("Status").Child("Satisfacao").SetValueAsync(valor);
+    }
+
     private void SetLevelTema(int level)
     {
 

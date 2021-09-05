@@ -2,7 +2,7 @@
 using Firebase.Auth;
 using Firebase.Database;
 using UnityEngine;
-using UnityEngine.UI;
+
 
 public class FireBabeAuh : MonoBehaviour
 {
@@ -40,7 +40,7 @@ public class FireBabeAuh : MonoBehaviour
         dbReference = FirebaseDatabase.DefaultInstance.RootReference;
         
     }
-
+  
 
 
 }

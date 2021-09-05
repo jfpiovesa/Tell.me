@@ -1,45 +1,45 @@
 fileFormatVersion: 2
-guid: 3db0783b58c2429b9bc1f560ba323d05
+guid: 5d46f3be89af4272b9f8990f26048598
 labels:
 - gvh
-- gvh_dotnet-4.5
 - gvh_version-8.1.0
-- gvhp_exportpath-Parse/Plugins/dotNet45/Unity.Compat.dll
-timeCreated: 1516145908
-licenseType: Pro
+- gvhp_exportpath-Firebase/Plugins/x86_64/FirebaseCppMessaging.bundle
+timeCreated: 1480838400
 PluginImporter:
   serializedVersion: 1
   iconMap: {}
   executionOrder: {}
   isPreloaded: 0
   platformData:
+    Android:
+      enabled: 0
+      settings:
+        CPU: AnyCPU
     Any:
-      enabled: 1
+      enabled: 0
       settings: {}
     Editor:
       enabled: 1
       settings:
+        CPU: AnyCPU
         DefaultValueInitialized: true
-    Android:
-      enabled: 1
-      settings:
-        CPU: AnyCPU
+        OS: AnyOS
     Linux:
-      enabled: 1
+      enabled: 0
       settings:
-        CPU: x86
+        CPU: None
     Linux64:
-      enabled: 1
+      enabled: 0
       settings:
-        CPU: x86_64
+        CPU: None
     LinuxUniversal:
-      enabled: 1
+      enabled: 0
       settings:
-        CPU: AnyCPU
+        CPU: None
     OSXIntel:
-      enabled: 1
+      enabled: 0
       settings:
-        CPU: x86
+        CPU: None
     OSXIntel64:
       enabled: 1
       settings:
@@ -49,25 +49,25 @@ PluginImporter:
       settings:
         CPU: AnyCPU
     Web:
-      enabled: 1
+      enabled: 0
       settings: {}
     WebStreamed:
-      enabled: 1
+      enabled: 0
       settings: {}
     Win:
-      enabled: 1
+      enabled: 0
       settings:
-        CPU: x86
+        CPU: None
     Win64:
-      enabled: 1
+      enabled: 0
       settings:
-        CPU: x86_64
+        CPU: None
     WindowsStoreApps:
-      enabled: 1
+      enabled: 0
       settings:
         CPU: AnyCPU
     iOS:
-      enabled: 1
+      enabled: 0
       settings:
         CompileFlags:
         FrameworkDependencies:
